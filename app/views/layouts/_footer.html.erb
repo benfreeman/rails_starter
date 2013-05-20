@@ -1,0 +1,35 @@
+
+<!-- Footer
+================================================== -->
+
+<footer class="footer navbar-fixed-bottom">
+<div class="container">
+  <ul>
+    <li><%= link_to "Contact Us", "https://www.reddit.com", target: "_blank" %></li>
+    <% if Rails.env.development? %>
+      <li id="debug" onclick="debug();" value='0'><%= link_to "Debug", '#' %></li>
+    <% end %>
+  </ul>
+</div>
+</footer>
+
+<script>
+  function debug()
+  {
+    currentvalue = document.getElementById('debug').value
+    if (currentvalue == 0){
+      var all = document.getElementsByTagName("*");
+      for (var i=0, max=all.length; i < max; i++) {
+        all[i].style.border = "1px solid blue";
+      };
+      document.getElementById('debug').value = "1";
+    }
+    else{
+      var all = document.getElementsByTagName("*");
+      for (var i=0, max=all.length; i < max; i++) {
+        all[i].style.border = "";
+      };
+      document.getElementById('debug').value = "0";
+    };
+  }
+</script>
