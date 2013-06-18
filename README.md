@@ -14,10 +14,12 @@ Steps
 
 1. git clone git@github.com:benfreeman/rails_starter.git
 
-2. bundle install
+2. cd rails_starter
 
-3. bundle exec rake db:migrate
+3. bundle install
 
-4. bundle exec rails s
+4. bundle exec rake db:migrate
+
+5. bundle exec rails s
 
 Your service should be running on http://localhost:3000
