@@ -18,6 +18,6 @@ Steps
 
 3. bundle exec rake db:migrate
 
-4. bundle exec rails c
+4. bundle exec rails s
 
 Your service should be running on http://localhost:3000
